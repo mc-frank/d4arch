@@ -1,6 +1,8 @@
 {
 	"dub": {
-		"lastUpgrade": "2016-06-01T18:14:09.7785221",
-		"cachedUpgrades": {}
+		"lastUpgrade": "2016-06-02T18:24:55.3686585",
+		"cachedUpgrades": {
+			"vibe-d": "0.7.28"
+		}
 	}
 }

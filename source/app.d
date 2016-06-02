@@ -11,6 +11,7 @@ import vibe.data.json;
 string api_url = "http://a.4cdn.org";
 string reply_img_url = "http://i.4cdn.org";
 //
+string dir = "./thread/";
 
 
 void main(string[] args) {
@@ -28,6 +29,7 @@ void main(string[] args) {
 
 }
 
+// Some voodoo magic type shit happens here
 void getThread(string thread_id, string board) {
 	string compl_url = api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ ".json";
 	writeln("URL = ", compl_url);
@@ -46,18 +48,19 @@ void getThread(string thread_id, string board) {
 		}
 	}
 
-
+	// Save thread replies in .json file
 	string filename = thread_id ~ ".json";
 	File f = File(filename, "w+");
 	f.write(posts["posts"].toPrettyString());
 	f.close();
 }
 
+// Download image to dir and filename
 void getImage(string filename, string board) {
 
 	string URL = reply_img_url ~ "/" ~ board ~ "/" ~ filename;
 
-	filename = "./pics/" ~ filename;
+	filename = dir ~ filename;
 
 	download(URL, filename);
 

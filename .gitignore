@@ -1,5 +1,6 @@
 
 d4arch
+.dub
 
 # Ignore all pictures that are downloaded
 pics/*
