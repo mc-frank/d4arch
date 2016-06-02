@@ -1,6 +1,11 @@
-
+# Project
 d4arch
 .dub
+
+# When debugging it generates .json files
+.json
+!dub.json
+!dub.selections.json
 
 # Ignore all pictures that are downloaded
 pics/*
