@@ -1,1 +1,9 @@
+
+d4arch
+
+# Ignore all pictures that are downloaded
 pics/*
+*.jpg
+*.png
+*.gif
+*.webm

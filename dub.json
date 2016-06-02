@@ -1,5 +1,5 @@
 {
-  "name": "http-test",
+  "name": "d4arch",
   "targetType": "executable",
   "dependencies": {
     "vibe-d:data" : "0.7.28"
