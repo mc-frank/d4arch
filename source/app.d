@@ -7,6 +7,9 @@ import std.stdio,
 
 import vibe.data.json;
 
+// d4arch usage
+string _usage = "Usage: d4arch [thread_id] [board] [optional - directory]";
+
 // API URLS
 string api_url = "http://a.4cdn.org";
 string reply_img_url = "http://i.4cdn.org";
@@ -18,17 +21,21 @@ string dir = "./thread/";
 void main(string[] args) {
 
 	if(args.length < 2) {
-		writeln("Usage: d4arch [thread_id] [board]");
+		writeln(_usage);
 		exit(-1);
 	}
-	if (args[1].length == 1) {
-		writeln("Usage: d4arch [thread_id] [board]");
+	if(args[1].length == 1) {
+		writeln(_usage);
 		exit(-1);
 	}
-
-	// Set the picture save location to be under the default
-	// location concatenated with the thread id
-	dir = dir ~ args[1] ~ "/";
+	if(args[3].length == 0) {
+		// Set the picture save location to be under the default
+		// location concatenated with the thread id
+		dir = dir ~ args[1] ~ "/";
+	}
+	else if(args[3].length > 0) {
+		dir = dir ~ args[3] ~ "/";
+	}
 
 	getThread(args[1], args[2]);
 
@@ -50,7 +57,8 @@ void getThread(string thread_id, string board) {
 		if( reply["tim"].type() !=  Json.Type.undefined) {
 			string ext = reply["ext"].toString().removechars("\"");
 			string img_file = reply["tim"].toString() ~ ext;
-			writefln("%s: %s", reply["no"], img_file);
+			//writefln("%s: %s", reply["no"], img_file);
+			writefln("Downloading: %s", img_file);
 			getImage(img_file, board, thread_id);
 		}
 	}
