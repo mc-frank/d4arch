@@ -1,0 +1,7 @@
+{
+  "name": "http-test",
+  "targetType": "executable",
+  "dependencies": {
+    "vibe-d:data" : "0.7.28"
+  }
+}

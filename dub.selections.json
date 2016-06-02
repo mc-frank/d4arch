@@ -1,0 +1,9 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"json": "0.1.0",
+		"vibe-d": "0.7.28",
+		"vmeta": "0.0.1",
+		"vutil": "0.0.2"
+	}
+}

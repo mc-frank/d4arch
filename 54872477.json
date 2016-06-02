@@ -1,0 +1,821 @@
+[
+	{
+		"no": 54872477,
+		"resto": 0,
+		"semantic_url": "is-there-ever-going-to-be-another-release",
+		"w": 192,
+		"h": 192,
+		"tn_w": 192,
+		"filename": "logo",
+		"name": "Anonymous",
+		"time": 1464873776,
+		"replies": 80,
+		"ext": ".png",
+		"now": "06/02/16(Thu)09:22:56",
+		"unique_ips": 30,
+		"tn_h": 192,
+		"tim": 1464873776464,
+		"bumplimit": 0,
+		"md5": "UWFR3F4B0dhZQKv3fQo4Jg==",
+		"com": "Is there ever going to be another release?<br><br>2.1.3 was like 6 months ago.",
+		"imagelimit": 0,
+		"fsize": 13708,
+		"images": 17
+	},
+	{
+		"no": 54872507,
+		"resto": 54872477,
+		"time": 1464873909,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:25:09",
+		"com": "They said they were taking a break from working on Clover."
+	},
+	{
+		"no": 54872540,
+		"resto": 54872477,
+		"time": 1464874039,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:27:19",
+		"com": "<a href=\"#p54872477\" class=\"quotelink\">&gt;&gt;54872477</a><br>He said soon, he just hasn&#039;t had time to tag and make a release build."
+	},
+	{
+		"no": 54872559,
+		"resto": 54872477,
+		"time": 1464874119,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:28:39",
+		"com": "<a href=\"#p54872507\" class=\"quotelink\">&gt;&gt;54872507</a><br>Who is they?<br><br>Is there a good alternative that is still under active development?  How the fuck does reddit have like 3-4 top tier apps and 4chan can&#039;t even get their shit together and make one good one?"
+	},
+	{
+		"no": 54872578,
+		"resto": 54872477,
+		"time": 1464874226,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:30:26",
+		"com": "<a href=\"#p54872559\" class=\"quotelink\">&gt;&gt;54872559</a><br>It&#039;s one guy working on this app for free. I wouldn&#039;t want to work on it either if I had to see threads everyday of people complaining about it."
+	},
+	{
+		"no": 54872597,
+		"resto": 54872477,
+		"time": 1464874368,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:32:48",
+		"com": "Anyone here remember Chanu? Loved that shit"
+	},
+	{
+		"no": 54872612,
+		"resto": 54872477,
+		"time": 1464874432,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:33:52",
+		"com": "<a href=\"#p54872578\" class=\"quotelink\">&gt;&gt;54872578</a><br>I mean I do get that, but I&#039;d be glad to pay a few Google Survey bux to an active developer.  I am sure there are plenty of other people that would do the same.  Nobody has to do it &quot;for free&quot;. <br><br><a href=\"#p54872597\" class=\"quotelink\">&gt;&gt;54872597</a><br>Yep, it is still on F-droid, but it hasn&#039;t been updated in about the same time frame."
+	},
+	{
+		"no": 54872683,
+		"resto": 54872477,
+		"w": 528,
+		"h": 486,
+		"tn_w": 125,
+		"filename": "Rh2H9PK",
+		"name": "Anonymous",
+		"time": 1464874805,
+		"ext": ".png",
+		"now": "06/02/16(Thu)09:40:05",
+		"tn_h": 115,
+		"tim": 1464874805228,
+		"md5": "rajDJXwpL/X1eJrDkXBovQ==",
+		"com": "I wish the guy behind Sync for reddit would bring back his 4chan app.<br><br>https://github.com/laurencedawson/c<wbr>han-sync-development/",
+		"fsize": 143355
+	},
+	{
+		"no": 54872700,
+		"resto": 54872477,
+		"time": 1464874894,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:41:34",
+		"com": "<a href=\"#p54872477\" class=\"quotelink\">&gt;&gt;54872477</a><br>chanobol is nice if you don&#039;t want to reply."
+	},
+	{
+		"no": 54872711,
+		"resto": 54872477,
+		"time": 1464874953,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:42:33",
+		"com": "<a href=\"#p54872700\" class=\"quotelink\">&gt;&gt;54872700</a><br>Yeah it would be awesome if it wasn&#039;t half of an app.  I emailed the dev a while back and he said he had no plans of adding it either."
+	},
+	{
+		"no": 54872715,
+		"resto": 54872477,
+		"time": 1464874974,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:42:54",
+		"com": "<a href=\"#p54872700\" class=\"quotelink\">&gt;&gt;54872700</a><br>How would I call you a faggot then?"
+	},
+	{
+		"no": 54872716,
+		"resto": 54872477,
+		"time": 1464874978,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:42:58",
+		"com": "Is compiling it worth it<br>I can compile it for /gee/ if you guys want too"
+	},
+	{
+		"no": 54872740,
+		"resto": 54872477,
+		"w": 490,
+		"h": 327,
+		"tn_w": 125,
+		"filename": "richard_stallman",
+		"name": "Anonymous",
+		"time": 1464875092,
+		"ext": ".jpg",
+		"now": "06/02/16(Thu)09:44:52",
+		"tn_h": 83,
+		"tim": 1464875092412,
+		"md5": "6TVzbTQJzdlChzS8gHr/SA==",
+		"com": "<a href=\"#p54872715\" class=\"quotelink\">&gt;&gt;54872715</a><br>yeah, it&#039;s tragic. but as anon said here <a href=\"#p54872711\" class=\"quotelink\">&gt;&gt;54872711</a> you&#039;ll never be able to",
+		"fsize": 70789
+	},
+	{
+		"no": 54872748,
+		"resto": 54872477,
+		"w": 887,
+		"h": 788,
+		"tn_w": 124,
+		"filename": "4chan-screenshot-1",
+		"name": "Anonymous",
+		"time": 1464875137,
+		"ext": ".jpg",
+		"now": "06/02/16(Thu)09:45:37",
+		"tn_h": 111,
+		"tim": 1464875137166,
+		"md5": "Fq17c8o4n+le3vqyyJAtNQ==",
+		"com": "Anyone use Dashchan lately?  It looks like it was updated as early as a week ago or so.  <br><br>https://github.com/Mishiranu/Dashch<wbr>an",
+		"fsize": 135348
+	},
+	{
+		"no": 54872795,
+		"resto": 54872477,
+		"time": 1464875403,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)09:50:03",
+		"com": "<a href=\"#p54872748\" class=\"quotelink\">&gt;&gt;54872748</a><br>actually pretty nice. supports archives too"
+	},
+	{
+		"no": 54872956,
+		"resto": 54872477,
+		"time": 1464876444,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:07:24",
+		"com": "/g/uys I compiled it<br>what now<br>how do I sign it?"
+	},
+	{
+		"no": 54872964,
+		"resto": 54872477,
+		"time": 1464876476,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:07:56",
+		"com": "<a href=\"#p54872748\" class=\"quotelink\">&gt;&gt;54872748</a><br>Installing now, I will report back with my findings anon."
+	},
+	{
+		"no": 54872986,
+		"resto": 54872477,
+		"time": 1464876622,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:10:22",
+		"com": "Check the archive, someone built an apk with latest features"
+	},
+	{
+		"no": 54873001,
+		"resto": 54872477,
+		"time": 1464876702,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:11:42",
+		"com": "<a href=\"#p54872956\" class=\"quotelink\">&gt;&gt;54872956</a><br>I think there&#039;s a guide in the github"
+	},
+	{
+		"no": 54873029,
+		"resto": 54872477,
+		"time": 1464876859,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:14:19",
+		"com": "<a href=\"#p54873001\" class=\"quotelink\">&gt;&gt;54873001</a><br><span class=\"quote\">&gt;See the comment in the build.gradle file how to sign your apk.</span><br>not in there"
+	},
+	{
+		"no": 54873075,
+		"resto": 54872477,
+		"time": 1464877114,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:18:34",
+		"com": "What problems do people have with Clover? Can&#039;t really think of any issues I&#039;ve had with it."
+	},
+	{
+		"no": 54873093,
+		"resto": 54872477,
+		"w": 1440,
+		"h": 2560,
+		"tn_w": 70,
+		"filename": "Screenshot_20160602-101920",
+		"name": "Anonymous",
+		"time": 1464877199,
+		"ext": ".png",
+		"now": "06/02/16(Thu)10:19:59",
+		"tn_h": 125,
+		"tim": 1464877199695,
+		"md5": "mqk/kVWG9Fvc72BjDWuhVg==",
+		"com": "<a href=\"#p54872748\" class=\"quotelink\">&gt;&gt;54872748</a><br><a href=\"#p54872964\" class=\"quotelink\">&gt;&gt;54872964</a><br><br>Well Dashchan officially destroys Clover.  I feel like a dipshit for not trying it all this time.  You guys tricked me into thinking it was Russian botnet trash.  <br><br>Thanks anon.",
+		"fsize": 315401
+	},
+	{
+		"no": 54873109,
+		"resto": 54872477,
+		"time": 1464877298,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:21:38",
+		"com": "<a href=\"#p54873075\" class=\"quotelink\">&gt;&gt;54873075</a><br><br>I definitely wouldn&#039;t say it is bad or that I have problems with it, but when you compare it to other full featured apps it just feels lacking.  That combined with the infrequent updates just makes me wish there was something better."
+	},
+	{
+		"no": 54873122,
+		"resto": 54872477,
+		"time": 1464877388,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:23:08",
+		"com": "<a href=\"#p54873093\" class=\"quotelink\">&gt;&gt;54873093</a><br><span class=\"quote\">&gt;implying it&#039;s not</span><br><br>Fuck off, Vladimir"
+	},
+	{
+		"no": 54873134,
+		"resto": 54872477,
+		"w": 475,
+		"h": 512,
+		"tn_w": 115,
+		"filename": "2016-05-04",
+		"name": "Anonymous",
+		"time": 1464877453,
+		"ext": ".png",
+		"now": "06/02/16(Thu)10:24:13",
+		"tn_h": 125,
+		"tim": 1464877453911,
+		"md5": "Qj0frOv+8bTA4nJl1/ELEw==",
+		"com": "<a href=\"#p54873122\" class=\"quotelink\">&gt;&gt;54873122</a><br><br>Yep, these are the exact posts I fell for.",
+		"fsize": 213253
+	},
+	{
+		"no": 54873147,
+		"resto": 54872477,
+		"time": 1464877561,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:26:01",
+		"com": "I just build a signed clover app<br>Anyone wants it<br>If yes good file sharing service"
+	},
+	{
+		"no": 54873158,
+		"resto": 54872477,
+		"time": 1464877618,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:26:58",
+		"com": "<a href=\"#p54873147\" class=\"quotelink\">&gt;&gt;54873147</a><br>I do<br><br>https://uguu.se/"
+	},
+	{
+		"no": 54873173,
+		"resto": 54872477,
+		"w": 1440,
+		"h": 2560,
+		"tn_w": 70,
+		"filename": "Screenshot_2016-03-23-06-03-26",
+		"name": "Anonymous",
+		"time": 1464877689,
+		"ext": ".png",
+		"now": "06/02/16(Thu)10:28:09",
+		"tn_h": 125,
+		"tim": 1464877689769,
+		"md5": "TJW1RSZHNBYBmNf7xTNc+Q==",
+		"com": "<a href=\"#p54872477\" class=\"quotelink\">&gt;&gt;54872477</a><br>Mention clover in the OP. <br>Floens is more likely to respond, or something. <br><br>2.1.3 is pretty stable, but I don&#039;t see what else he could add other than better regex matching for filters. For example, this doesn&#039;t highlight muh (You)s.",
+		"fsize": 177465
+	},
+	{
+		"no": 54873206,
+		"resto": 54872477,
+		"time": 1464877845,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:30:45",
+		"com": "<a href=\"#p54873158\" class=\"quotelink\">&gt;&gt;54873158</a><br>https://a.uguu.se/lgyca4Z5mEvZ_app-<wbr>normal-release-signed.apk<br>You have to uninstall clover before it will install because too retarded to change version number"
+	},
+	{
+		"no": 54873210,
+		"resto": 54872477,
+		"time": 1464877895,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:31:35",
+		"com": "<a href=\"#p54872477\" class=\"quotelink\">&gt;&gt;54872477</a><br>If it works fine, why do you need to update you fucking retard."
+	},
+	{
+		"no": 54873228,
+		"resto": 54872477,
+		"time": 1464877980,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:33:00",
+		"com": "<a href=\"#p54873210\" class=\"quotelink\">&gt;&gt;54873210</a><br>More features, better design?  If we stuck with that &quot;just werks&quot; we&#039;d all still be on Windows 95 you fucking retard."
+	},
+	{
+		"no": 54873238,
+		"resto": 54872477,
+		"time": 1464878035,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:33:55",
+		"com": "<a href=\"#p54873210\" class=\"quotelink\">&gt;&gt;54873210</a><br>Autism"
+	},
+	{
+		"no": 54873246,
+		"resto": 54872477,
+		"time": 1464878072,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:34:32",
+		"com": "<a href=\"#p54873206\" class=\"quotelink\">&gt;&gt;54873206</a><br>You&#039;re a hero"
+	},
+	{
+		"no": 54873269,
+		"resto": 54872477,
+		"time": 1464878184,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:36:24",
+		"com": "<a href=\"#p54872477\" class=\"quotelink\">&gt;&gt;54872477</a><br>it&#039;s mature software, it just works. it doesn&#039;t need a new release every week.<br><br>this whole change for the sake of change mentality is what ruins good software."
+	},
+	{
+		"no": 54873318,
+		"resto": 54872477,
+		"time": 1464878408,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:40:08",
+		"com": "<a href=\"#p54873269\" class=\"quotelink\">&gt;&gt;54873269</a><br><br>You&#039;re a literal retard."
+	},
+	{
+		"no": 54873407,
+		"resto": 54872477,
+		"time": 1464878917,
+		"name": "Clover dev",
+		"trip": "!!KIBcz60q2HZ",
+		"now": "06/02/16(Thu)10:48:37",
+		"com": "I still have to do the pending release, but I didn&#039;t have time for it last weekend. The sd card issues *need* to be solved and I need to add a top/bottom button.<br><br>About future development, it&#039;s a tough choice. Clover is a very fun project for me, but as long as it&#039;s not on the Play Store not a lot of people download it or know about it. That and I don&#039;t have any statistics of how many people download it from f-droid and I don&#039;t know about any crashes. (I don&#039;t want to implement botnet solutions for that). No reviews or user feedback through f-droid either.<br><br>I was working on imageboard software myself ( https://github.com/Floens/uchan ) and still want to make Clover multi site and make it compatible with it. I won&#039;t abandon it and I will update Clover when there are any issues with new Android versions, but don&#039;t expect a lot of new development from me. It&#039;s just that I don&#039;t get back what I put into it. Take a look how much code Clover actually is, it&#039;s a lot. I barely receive donations. The only thing that would spike development again is putting it back on the Play Store, and they&#039;ll probably ban me if I do.<br><br>I want to work on another app that has a wider audience than Clover. I&#039;ve learned a lot about Android development from Clover and I want to put that to good use in something else. I don&#039;t want to be so dependent on external services. And I don&#039;t want something that&#039;s risky for the store rules.<br><br>So again, not abandoning it, I&#039;ll tag a new release when I get the current issues fixed, and multi site will come if I want to keep working on µchan, but that&#039;s about it."
+	},
+	{
+		"no": 54873431,
+		"resto": 54872477,
+		"time": 1464879069,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:51:09",
+		"com": "<a href=\"#p54873318\" class=\"quotelink\">&gt;&gt;54873318</a><br><span class=\"quote\">&gt;clover is already fully featured</span><br><span class=\"quote\">&gt;does not have performance issues</span><br><span class=\"quote\">&gt;there are no changes on 4chan</span><br>Name 1 thing that needs to be included in a new release."
+	},
+	{
+		"no": 54873445,
+		"resto": 54872477,
+		"time": 1464879117,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)10:51:57",
+		"com": "<a href=\"#p54873431\" class=\"quotelink\">&gt;&gt;54873431</a><br><span class=\"quote\">&gt;The sd card issues *need* to be solved and I need to add a top/bottom button.</span><br><br>:^)"
+	},
+	{
+		"no": 54873461,
+		"resto": 54872477,
+		"w": 1143,
+		"h": 2237,
+		"tn_w": 63,
+		"filename": "heehee",
+		"name": "Anonymous",
+		"time": 1464879209,
+		"ext": ".jpg",
+		"now": "06/02/16(Thu)10:53:29",
+		"tn_h": 125,
+		"tim": 1464879209545,
+		"md5": "euvwsHA9O1x0tAes5NUaiQ==",
+		"com": "<a href=\"#p54873431\" class=\"quotelink\">&gt;&gt;54873431</a><br><a href=\"#p54873445\" class=\"quotelink\">&gt;&gt;54873445</a><br><br>LMAO literally BTFO.  gg m8",
+		"fsize": 217733
+	},
+	{
+		"no": 54873536,
+		"resto": 54872477,
+		"time": 1464879628,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:00:28",
+		"com": "<a href=\"#p54873407\" class=\"quotelink\">&gt;&gt;54873407</a><br>This imageboard software is interesting, is it possible to disable images?"
+	},
+	{
+		"no": 54873584,
+		"resto": 54872477,
+		"w": 505,
+		"h": 431,
+		"tn_w": 125,
+		"filename": "image",
+		"name": "Anonymous",
+		"time": 1464879879,
+		"ext": ".jpg",
+		"now": "06/02/16(Thu)11:04:39",
+		"tn_h": 106,
+		"tim": 1464879879984,
+		"md5": "iUZZvQ/hY7gFcFSfkeTrEw==",
+		"com": "<a href=\"#p54873536\" class=\"quotelink\">&gt;&gt;54873536</a>",
+		"fsize": 16843
+	},
+	{
+		"no": 54873601,
+		"resto": 54872477,
+		"time": 1464879988,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:06:28",
+		"com": "<a href=\"#p54873093\" class=\"quotelink\">&gt;&gt;54873093</a><br>How did you change the language to english?"
+	},
+	{
+		"no": 54873609,
+		"resto": 54872477,
+		"time": 1464880033,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:07:13",
+		"com": "<a href=\"#p54873407\" class=\"quotelink\">&gt;&gt;54873407</a><br>Can&#039;t you just disable the boards and add some kind of &quot;welcome tutorial&quot; to add boards? How are Reddit apps with nsfw content still on the Play Store?"
+	},
+	{
+		"no": 54873615,
+		"resto": 54872477,
+		"time": 1464880053,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:07:33",
+		"com": "<a href=\"#p54873601\" class=\"quotelink\">&gt;&gt;54873601</a><br><br>I didn&#039;t do anything special, but I did see an option in the hamburger menu that let&#039;s you change it."
+	},
+	{
+		"no": 54873634,
+		"resto": 54872477,
+		"time": 1464880115,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:08:35",
+		"com": "<a href=\"#p54873609\" class=\"quotelink\">&gt;&gt;54873609</a><br>Not to mention other 4chan apps like Chanobol, Mimi, etc."
+	},
+	{
+		"no": 54873676,
+		"resto": 54872477,
+		"time": 1464880326,
+		"name": "Clover dev",
+		"trip": "!!KIBcz60q2HZ",
+		"now": "06/02/16(Thu)11:12:06",
+		"com": "<a href=\"#p54873536\" class=\"quotelink\">&gt;&gt;54873536</a><br>Yes, admins (me) can change that setting per board."
+	},
+	{
+		"no": 54873918,
+		"resto": 54872477,
+		"time": 1464881530,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:32:10",
+		"com": "<a href=\"#p54873093\" class=\"quotelink\">&gt;&gt;54873093</a><br>This app is amazing.<br>Wish I had known about it sooner (or it be on FDroid, since that&#039;s where I usually look for apps not on Play)."
+	},
+	{
+		"no": 54873944,
+		"resto": 54872477,
+		"time": 1464881624,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:33:44",
+		"com": "<a href=\"#p54872748\" class=\"quotelink\">&gt;&gt;54872748</a><br><span class=\"quote\">&gt;not in Google Play Store or F-Droid</span>"
+	},
+	{
+		"no": 54873964,
+		"resto": 54872477,
+		"time": 1464881764,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:36:04",
+		"com": "<a href=\"#p54873944\" class=\"quotelink\">&gt;&gt;54873944</a><br><br>Yeah that triggered me too, but there is a built in updater that supports the main app and extensions."
+	},
+	{
+		"no": 54873965,
+		"resto": 54872477,
+		"time": 1464881774,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:36:14",
+		"com": "<a href=\"#p54872748\" class=\"quotelink\">&gt;&gt;54872748</a><br><span class=\"quote\">&gt;unironically using Russian niggerware</span><br>nyet"
+	},
+	{
+		"no": 54873977,
+		"resto": 54872477,
+		"time": 1464881815,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:36:55",
+		"com": "<a href=\"#p54872748\" class=\"quotelink\">&gt;&gt;54872748</a><br><span class=\"quote\">&gt;no tiles in catalog</span><br>This really triggers me"
+	},
+	{
+		"no": 54874001,
+		"resto": 54872477,
+		"w": 1440,
+		"h": 2560,
+		"tn_w": 70,
+		"filename": "Screenshot_20160602-113758",
+		"name": "Anonymous",
+		"time": 1464881913,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:38:33",
+		"tn_h": 125,
+		"tim": 1464881913935,
+		"md5": "2x87PijyGvRlCQNTU87hQQ==",
+		"com": "<a href=\"#p54873977\" class=\"quotelink\">&gt;&gt;54873977</a><br><br>Switch it in the upper right menu under appearance.",
+		"fsize": 1359940
+	},
+	{
+		"no": 54874039,
+		"resto": 54872477,
+		"time": 1464882070,
+		"name": "Clover dev",
+		"trip": "!!KIBcz60q2HZ",
+		"now": "06/02/16(Thu)11:41:10",
+		"com": "<a href=\"#p54873609\" class=\"quotelink\">&gt;&gt;54873609</a><br>Sure, but my play account is &quot;tainted&quot; so I don&#039;t know if that&#039;s enough."
+	},
+	{
+		"no": 54874056,
+		"resto": 54872477,
+		"w": 1080,
+		"h": 1920,
+		"tn_w": 70,
+		"filename": "Screenshot_2016-06-02-11-41-24",
+		"name": "Anonymous",
+		"time": 1464882163,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:42:43",
+		"tn_h": 125,
+		"tim": 1464882163721,
+		"md5": "/xIiJZIaw6ZSMADY4kSsQQ==",
+		"com": "<a href=\"#p54874001\" class=\"quotelink\">&gt;&gt;54874001</a><br>How did you get that many tiles a supposed to my four? Is it just because of your screen size?",
+		"fsize": 877007
+	},
+	{
+		"no": 54874059,
+		"resto": 54872477,
+		"w": 500,
+		"h": 373,
+		"tn_w": 125,
+		"filename": "500",
+		"name": "Anonymous",
+		"time": 1464882169,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:42:49",
+		"tn_h": 93,
+		"tim": 1464882169575,
+		"md5": "7ZYJtTkmU9m+ybZyrl3+xw==",
+		"com": "<a href=\"#p54874001\" class=\"quotelink\">&gt;&gt;54874001</a><br>That catalog is even worse than the new one on Clover.<br><br>Ayy lmao<br><br>I&#039;m staying on 1.2.11 forever it looks like, as long as it works I&#039;m golden.",
+		"fsize": 257027
+	},
+	{
+		"no": 54874078,
+		"resto": 54872477,
+		"time": 1464882245,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:44:05",
+		"com": "<a href=\"#p54873206\" class=\"quotelink\">&gt;&gt;54873206</a><br>Thanks alot"
+	},
+	{
+		"no": 54874081,
+		"resto": 54872477,
+		"time": 1464882265,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:44:25",
+		"com": "<a href=\"#p54874059\" class=\"quotelink\">&gt;&gt;54874059</a><br><br>What is bad about it and what does 1.2.11 look like?  Honestly curious."
+	},
+	{
+		"no": 54874090,
+		"resto": 54872477,
+		"time": 1464882292,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:44:52",
+		"com": "<a href=\"#p54873407\" class=\"quotelink\">&gt;&gt;54873407</a><br>&lt;3"
+	},
+	{
+		"no": 54874094,
+		"resto": 54872477,
+		"w": 540,
+		"h": 960,
+		"tn_w": 70,
+		"filename": "Screenshot_20160602-162708",
+		"name": "Anonymous",
+		"time": 1464882319,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:45:19",
+		"tn_h": 125,
+		"tim": 1464882319373,
+		"md5": "0qBDq1WKlsukIZthD64MxA==",
+		"com": "<a href=\"#p54874078\" class=\"quotelink\">&gt;&gt;54874078</a>",
+		"fsize": 95152
+	},
+	{
+		"no": 54874096,
+		"resto": 54872477,
+		"time": 1464882327,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:45:27",
+		"com": "<a href=\"#p54874056\" class=\"quotelink\">&gt;&gt;54874056</a><br><br>I guess so, I didn&#039;t mess with any other settings."
+	},
+	{
+		"no": 54874107,
+		"resto": 54872477,
+		"time": 1464882374,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:46:14",
+		"com": "<span class=\"quote\">&gt;use Mimi</span><br><span class=\"quote\">&gt;every time I open an image the page scrolls down like 30 posts </span><br><br>What&#039;s a better app?  Is Clover the standard now?"
+	},
+	{
+		"no": 54874116,
+		"resto": 54872477,
+		"time": 1464882409,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:46:49",
+		"com": "<a href=\"#p54873228\" class=\"quotelink\">&gt;&gt;54873228</a><br>Windows 95 crashed all the time. You&#039;re delusional."
+	},
+	{
+		"no": 54874122,
+		"resto": 54872477,
+		"w": 540,
+		"h": 960,
+		"tn_w": 70,
+		"filename": "Screenshot_2016-06-02-16-46-04",
+		"name": "Anonymous",
+		"time": 1464882426,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:47:06",
+		"tn_h": 125,
+		"tim": 1464882426379,
+		"md5": "48kAqatrqRmYabastrYjhA==",
+		"com": "<a href=\"#p54874081\" class=\"quotelink\">&gt;&gt;54874081</a>",
+		"fsize": 334379
+	},
+	{
+		"no": 54874124,
+		"resto": 54872477,
+		"time": 1464882437,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:47:17",
+		"com": "<span class=\"quote\">&gt;updated a month ago on github</span>"
+	},
+	{
+		"no": 54874128,
+		"resto": 54872477,
+		"time": 1464882453,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:47:33",
+		"com": "<a href=\"#p54874116\" class=\"quotelink\">&gt;&gt;54874116</a><br><br><span class=\"quote\">&gt;what is hyperbole</span>"
+	},
+	{
+		"no": 54874142,
+		"resto": 54872477,
+		"time": 1464882551,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:49:11",
+		"com": "<a href=\"#p54874128\" class=\"quotelink\">&gt;&gt;54874128</a><br>https://www.youtube.com/watch?v=yiP<wbr>LZj-8XoE<br><br>Its not a hyperbole you mongoloid. The system would crash 2-3 times per week if you use it at all."
+	},
+	{
+		"no": 54874177,
+		"resto": 54872477,
+		"w": 540,
+		"h": 960,
+		"tn_w": 70,
+		"filename": "Screenshot_20160602-175012",
+		"name": "Anonymous",
+		"time": 1464882695,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:51:35",
+		"tn_h": 125,
+		"tim": 1464882695427,
+		"md5": "76QlwYSDZQi1avahw8omwg==",
+		"com": "<a href=\"#p54874122\" class=\"quotelink\">&gt;&gt;54874122</a><br>In latest clover build by this anon <a href=\"#p54873206\" class=\"quotelink\">&gt;&gt;54873206</a> its sorta fixed",
+		"fsize": 290272
+	},
+	{
+		"no": 54874179,
+		"resto": 54872477,
+		"time": 1464882714,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:51:54",
+		"com": "<a href=\"#p54874142\" class=\"quotelink\">&gt;&gt;54874142</a><br>Not your statement, the original one you retard."
+	},
+	{
+		"no": 54874185,
+		"resto": 54872477,
+		"w": 480,
+		"h": 800,
+		"tn_w": 75,
+		"filename": "Screenshot_2016-06-01-21-02-43",
+		"name": "Anonymous",
+		"time": 1464882753,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:52:33",
+		"tn_h": 125,
+		"tim": 1464882753324,
+		"md5": "2fBx1GpHJ3rc874+XcG3tw==",
+		"com": "<a href=\"#p54873431\" class=\"quotelink\">&gt;&gt;54873431</a><br><a href=\"#p54873445\" class=\"quotelink\">&gt;&gt;54873445</a>",
+		"fsize": 295115
+	},
+	{
+		"no": 54874229,
+		"resto": 54872477,
+		"time": 1464882940,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:55:40",
+		"com": "<a href=\"#p54873407\" class=\"quotelink\">&gt;&gt;54873407</a><br>Thanks dev for an excellent app. I honestly don&#039;t have any issues with this app whatsoever."
+	},
+	{
+		"no": 54874236,
+		"resto": 54872477,
+		"time": 1464882961,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:56:01",
+		"com": "<a href=\"#p54874177\" class=\"quotelink\">&gt;&gt;54874177</a><br>Does it have up/down buttons yet?<br>Non-inline replying?<br>Can you disable that green round new post button?"
+	},
+	{
+		"no": 54874274,
+		"resto": 54872477,
+		"time": 1464883147,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)11:59:07",
+		"com": "<a href=\"#p54874236\" class=\"quotelink\">&gt;&gt;54874236</a><br>You can disable FAB (Reply button)<br>Up/Down buttons dont exist<br>What is non-inline replying?"
+	},
+	{
+		"no": 54874278,
+		"resto": 54872477,
+		"w": 1615,
+		"h": 955,
+		"tn_w": 125,
+		"filename": "sbs",
+		"name": "Anonymous",
+		"time": 1464883159,
+		"ext": ".png",
+		"now": "06/02/16(Thu)11:59:19",
+		"tn_h": 73,
+		"tim": 1464883159367,
+		"md5": "ORt8v2X6IP8HiPtKBoTPLg==",
+		"com": "So which one do you guys like better and why?",
+		"fsize": 1342125
+	},
+	{
+		"no": 54874301,
+		"resto": 54872477,
+		"time": 1464883239,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:00:39",
+		"com": "<a href=\"#p54874107\" class=\"quotelink\">&gt;&gt;54874107</a><br>That&#039;s because it scrolls down to the post the image was attached on.<br>It&#039;s annoying.<br>I&#039;m probably going to switch to Dashchan as my main shitposting app. I&#039;ll miss the tab UI, tho."
+	},
+	{
+		"no": 54874315,
+		"resto": 54872477,
+		"time": 1464883300,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:01:40",
+		"com": "<a href=\"#p54874278\" class=\"quotelink\">&gt;&gt;54874278</a><br>3<br>The spacing makes all the difference."
+	},
+	{
+		"no": 54874329,
+		"resto": 54872477,
+		"time": 1464883365,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:02:45",
+		"com": "<a href=\"#p54874278\" class=\"quotelink\">&gt;&gt;54874278</a><br><a href=\"#p54874315\" class=\"quotelink\">&gt;&gt;54874315</a><br>Agreed, although I could do without the &quot;Catalog: Technology&quot; part."
+	},
+	{
+		"no": 54874338,
+		"resto": 54872477,
+		"time": 1464883414,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:03:34",
+		"com": "<a href=\"#p54874278\" class=\"quotelink\">&gt;&gt;54874278</a><br>You can choose how many columns in the dev version"
+	},
+	{
+		"no": 54874344,
+		"resto": 54872477,
+		"time": 1464883430,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:03:50",
+		"com": "<a href=\"#p54874278\" class=\"quotelink\">&gt;&gt;54874278</a><br>2<br>Dont want to use russian botnet<br>1 would be OK if I had no other choice but prefer 2 because KK ui not matching all other apps, dont care about up/down buttons and the other small things"
+	},
+	{
+		"no": 54874363,
+		"resto": 54872477,
+		"time": 1464883508,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:05:08",
+		"com": "<a href=\"#p54874344\" class=\"quotelink\">&gt;&gt;54874344</a><br><span class=\"quote\">&gt;Dont want to use russian botnet</span><br>This has nothing to do with the design m8."
+	},
+	{
+		"no": 54874368,
+		"resto": 54872477,
+		"time": 1464883521,
+		"name": "Anonymous",
+		"now": "06/02/16(Thu)12:05:21",
+		"com": "<a href=\"#p54874338\" class=\"quotelink\">&gt;&gt;54874338</a><br>Oh god what is this"
+	},
+	{
+		"no": 54874389,
+		"resto": 54872477,
+		"w": 540,
+		"h": 960,
+		"tn_w": 70,
+		"filename": "Screenshot_20160602-180449",
+		"name": "Anonymous",
+		"time": 1464883590,
+		"ext": ".png",
+		"now": "06/02/16(Thu)12:06:30",
+		"tn_h": 125,
+		"tim": 1464883590693,
+		"md5": "0QIOXtDYCHPLUz6wzPoIcA==",
+		"com": "<a href=\"#p54874368\" class=\"quotelink\">&gt;&gt;54874368</a>",
+		"fsize": 334575
+	}
+]
