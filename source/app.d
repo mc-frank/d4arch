@@ -12,6 +12,7 @@ import vibe.data.json;
 string thread_id;
 string board;
 string dir = "./saved_thread";
+string dir_temp;
 bool save_page = false;
 
 // d4arch usage
@@ -27,9 +28,14 @@ string semantic_url = "";
 // Main
 void main(string[] args) {
 
-	auto options = getopt(args, "thread", &thread_id, "board", &board, "dir", &dir);
+	auto options = getopt(args, "thread", &thread_id, "board", &board, "dir", &dir_temp);
 
-	dir = dir ~ "/" ~ thread_id ~ "/";
+	if(dir_temp.length == 0) {
+		dir = dir ~ "/" ~ thread_id ~ "/";
+	}
+	else {
+		dir = dir ~ "/" ~ dir_temp ~ "/";
+	}
 
 	if(thread_id.length == 0 || board.length == 0) {
 		writeln(_usage);
