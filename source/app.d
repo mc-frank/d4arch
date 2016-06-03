@@ -11,7 +11,7 @@ import vibe.data.json;
 // Input variables
 string thread_id;
 string board;
-string dir = "./save_thread/";
+string dir = "./saved_thread";
 bool save_page = false;
 
 // d4arch usage
@@ -29,7 +29,7 @@ void main(string[] args) {
 
 	auto options = getopt(args, "thread", &thread_id, "board", &board, "dir", &dir);
 
-	dir = dir ~ "/";
+	dir = dir ~ "/" ~ thread_id ~ "/";
 
 	if(thread_id.length == 0 || board.length == 0) {
 		writeln(_usage);
