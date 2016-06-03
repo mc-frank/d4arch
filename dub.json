@@ -1,5 +1,6 @@
 {
   "name": "d4arch",
+  "author" : "Sam Unwin",
   "targetType": "executable",
   "dependencies": {
     "vibe-d:data" : "0.7.28"

@@ -8,7 +8,7 @@ d4arch
 !dub.selections.json
 
 # Ignore all pictures that are downloaded
-pics/*
+saved_thread/*
 *.jpg
 *.png
 *.gif
