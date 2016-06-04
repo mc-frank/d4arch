@@ -3,6 +3,7 @@
   "author" : "Sam Unwin",
   "targetType": "executable",
   "dependencies": {
+    "dlangui": "~>0.8.29",
     "vibe-d:data" : "0.7.28"
   }
 }
