@@ -25,6 +25,7 @@ string _usage = "Usage: d4arch --thread=[thread_id] --board=[board] --dir=[optio
 // API URLs
 string api_url = "http://a.4cdn.org";
 string reply_img_url = "http://i.4cdn.org";
+string html_api_url = "http://boards.4chan.org";
 
 // entry point for dlangui based application
 extern (C) int UIAppMain(string[] args) {
@@ -132,13 +133,13 @@ extern (C) int UIAppMain(string[] args) {
       return true;
     }
 
-    if(dir.length == 0) {
-      dir = dir ~ thread_id ~ "/";
+    if(dir_temp.length == 0) {
+      dir = dir ~ "/" ~ thread_id ~ "/";
     }
     else {
       dir = dir ~ "/" ~ dir_temp ~ "/";
     }
-
+    writeln("dir = ", dir);
     getThread();
   }
 
@@ -146,7 +147,9 @@ extern (C) int UIAppMain(string[] args) {
 }
 
 void getThread() {
+  //getHTMLPage();
   string compl_url = api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ ".json";
+  writeln("URL = ", compl_url);
   auto contents = get(compl_url);
 
   // vibe-d json implementation
@@ -163,6 +166,29 @@ void getThread() {
 			getImage(img_file);
 		}
 	}
+}
+
+void getHTMLPage() {
+  string compl_json_url = api_url ~ "/" ~ board ~ "/" ~ thread_id ~ ".json";
+  auto json_contents = get(compl_json_url);
+
+  string semantic_url;
+  // vibe-d json implementation
+  string json_string = to!string(json_contents);
+  auto posts = parseJsonString(json_string);
+
+  foreach(reply; posts["posts"]) {
+    if( reply["semantic_url"].type() != Json.Type.undefined) {
+      semantic_url = reply["semantic_url"].toString();
+    }
+  }
+
+  string compl_html_url = html_api_url ~ "/" ~ board ~ "/" ~ thread_id ~ "/" ~ semantic_url ~ ".html";
+  writeln("compl_html_url = ", compl_html_url);
+  auto html_contents = get(compl_html_url);
+
+  download(compl_html_url, "index.html");
+
 }
 
 void getImage(string filename) {
