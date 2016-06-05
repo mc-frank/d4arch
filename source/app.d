@@ -147,9 +147,8 @@ extern (C) int UIAppMain(string[] args) {
 }
 
 void getThread() {
-  //getHTMLPage();
+  getHTMLPage();
   string compl_url = api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ ".json";
-  writeln("URL = ", compl_url);
   auto contents = get(compl_url);
 
   // vibe-d json implementation
@@ -169,7 +168,8 @@ void getThread() {
 }
 
 void getHTMLPage() {
-  string compl_json_url = api_url ~ "/" ~ board ~ "/" ~ thread_id ~ ".json";
+  string compl_json_url = api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ ".json";
+  writeln("JSON URL = ", compl_json_url);
   auto json_contents = get(compl_json_url);
 
   string semantic_url;
@@ -179,15 +179,21 @@ void getHTMLPage() {
 
   foreach(reply; posts["posts"]) {
     if( reply["semantic_url"].type() != Json.Type.undefined) {
-      semantic_url = reply["semantic_url"].toString();
+      semantic_url = reply["semantic_url"].toString().removechars("\"");
     }
   }
 
-  string compl_html_url = html_api_url ~ "/" ~ board ~ "/" ~ thread_id ~ "/" ~ semantic_url ~ ".html";
+  string compl_html_url = html_api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ "/" ~ semantic_url ~ ".html";
   writeln("compl_html_url = ", compl_html_url);
   auto html_contents = get(compl_html_url);
 
-  download(compl_html_url, "index.html");
+
+  if(!dir.exists()) {
+		mkdirRecurse(cast(char[]) dir);
+	}
+
+  string filename = dir ~ "index.html";
+  download(compl_html_url, filename);
 
 }
 
