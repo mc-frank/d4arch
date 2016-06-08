@@ -1,210 +1,178 @@
-import std.stdio,
-      std.string,
-      std.getopt,
+import core.thread,
+      std.concurrency,
+      std.stdio,
+      std.algorithm,
       std.conv,
-      std.net.curl,
+      std.string,
+      std.array,
+      std.datetime,
       std.file,
-      std.json,
-      dlangui;
+      tkd.tkdapplication,
+      vibe.data.json,
+      std.net.curl;
 
-import vibe.data.json;
+// HTML URL
+string http_html_url = "http://boards.4chan.org/";
+string https_html_url = "https://boards.4chan.org/";
 
-mixin APP_ENTRY_POINT;
+// API URL
+string api_url = "https://a.4cdn.org/";
+string api_img_url = "https://i.4cdn.org/";
 
-// Input variables
-string thread_id;
-string board;
-string dir = "./saved_thread";
-string dir_temp;
-bool save_page = false;
-bool nogui = false;
+// Application object
+class Application : TkdApplication {
 
-// Usage
-string _usage = "Usage: d4arch --thread=[thread_id] --board=[board] --dir=[optional - directory] --nogui [optional]";
+  private Entry _thread_entry;
+  private Entry _dir_entry;
 
-// API URLs
-string api_url = "http://a.4cdn.org";
-string reply_img_url = "http://i.4cdn.org";
-string html_api_url = "http://boards.4chan.org";
+  private string op_no;
+  private string dir;
 
-// entry point for dlangui based application
-extern (C) int UIAppMain(string[] args) {
+  override protected void initInterface() {
+    this.mainWindow.setTitle("d4arch");
+    this.mainWindow.setMinSize(400, 150);
+    this.mainWindow.setMaxSize(400, 150);
 
-  auto options = getopt(args, "thread", &thread_id, "board", &board, "dir", &dir_temp, "nogui", &nogui);
+    //this.createMenu();
 
-  if(nogui == false) {
-    // create window
-    Log.d("Creating window");
-    if(!Platform.instance) {
-      Log.e("Platform.instance is null!!!");
-    }
+    auto textPanel = this.createTextPanel();
 
-    Window window = Platform.instance.createWindow("d4arch", null, WindowFlag.Resizable, 340, 200);
-    //Window window = Platform.instance.createWindow("d4arch", null);
-    Log.d("Window created");
-
-    // create a widget to show in window
-    window.mainWidget = parseML(q{
-      VerticalLayout {
-        margins: 0
-        padding: 0
-        layoutWidth: fill
-        backgroundColor: "#EEAA88"
-
-        // Top label
-        TextWidget { padding: 5; text: "d4arch"; textColor: "black"; fontSize: 150% }
-
-        // Thread and board stuff
-        TableLayout {
-          padding: 5
-          colCount: 2
-          layoutWidth: fill
-          TextWidget { text: "Thread ID:" }
-          EditLine { id: threadText; layoutWidth: fill }
-          TextWidget { text: "Board ID:" }
-          EditLine { id: boardText }
-          TextWidget { text: "Directory:"}
-          EditLine { id: dirText }
-          TextWidget { text: "Save Page [not working]:"; textColor: "black"; fontSize: 100% }
-          CheckBox { id: savePage }
-        }
-
-        // Some spacing
-        VSpacer {
-          layoutWidth: FILL_PARENT
-        }
-
-        // Action buttons
-        HorizontalLayout {
-          padding : 10
-          Button { id: btnDownload; text: "Download" }
-          Button { id: btnCancel; text: "Close" }
-        }
-      }
-    }
-    );
+    textPanel.pack(0, 0, GeometrySide.top, GeometryFill.both, AnchorPosition.center, true);
 
 
-    auto thread_edit = window.mainWidget.childById!EditLine("threadText");
-    auto board_edit = window.mainWidget.childById!EditLine("boardText");
-    auto dir_temp_edit = window.mainWidget.childById!EditLine("dirText");
-
-    // Get the thread
-    window.mainWidget.childById!Button("btnDownload").click = delegate(Widget w) {
-      thread_id = to!string(thread_edit.text);
-      board = to!string(board_edit.text);
-      dir_temp = to!string(dir_temp_edit.text);
-
-      if(thread_id.length == 0 || board.length == 0 || dir_temp.length == 0) {
-        window.showMessageBox(UIString("Error"d), UIString("Please complete thread data"d));
-        return true;
-      }
-
-      if(dir.length == 0) {
-        dir = dir ~ thread_id ~ "/";
-      }
-      else {
-        dir = dir ~ "/" ~ dir_temp ~ "/";
-      }
-      //writeln("DIR = ", dir);
-
-      getThread();
-      //window.showMessageBox(UIString("Download Dialog"d), UIString("Thread ID = "d ~ to!dstring(thread_id) ~ "\nBoard ID = "d ~ to!dstring(board_id)));
-      window.showMessageBox(UIString("Downloaded"d), UIString("Completed."d));
-      return true;
-    };
-
-    // close window on Cancel button click
-    window.mainWidget.childById!Button("btnCancel").click = delegate(Widget w) {
-      window.close();
-      return true;
-    };
-
-
-    window.show();
-
-    return Platform.instance.enterMessageLoop();
+    this.setUpKeyBindings();
   }
 
-	// when nogui is set
-  else if(nogui == true) {
-    if(thread_id.length == 0 || board.length == 0) {
-      writeln("Thread or board is incorrect");
-      return true;
+  private string getAPIUrl(string thread_url) {
+    thread_url = thread_url.replace(https_html_url, api_url);
+    thread_url = thread_url.replace(http_html_url, api_url);
+
+    // make length of thread_url = 36
+    while(thread_url.length != 36) {
+      thread_url = thread_url.chop();
     }
 
-    if(dir_temp.length == 0) {
-      dir = dir ~ "/" ~ thread_id ~ "/";
-    }
-    else {
-      dir = dir ~ "/" ~ dir_temp ~ "/";
-    }
-    writeln("dir = ", dir);
-    getThread();
+    thread_url = thread_url ~ ".json";
+    return thread_url;
   }
 
-  return 0;
-}
+  private void thread_download(CommandArgs args) {
+    //download
+    string thread_url = _thread_entry.getValue();
+    thread_url = getAPIUrl(thread_url);
 
-void getThread() {
-  getHTMLPage();
-  string compl_url = api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ ".json";
-  auto contents = get(compl_url);
+    auto contents = get(thread_url);
 
-  // vibe-d json implementation
-  string json_string = to!string(contents);
-  auto posts = parseJsonString(json_string);
+    //vibe-d json implementation
+    string json_string = to!string(contents);
+    auto posts = parseJsonString(json_string);
 
-  // Loop through each reply checking if there's an image present,
-	// if so get the URL, and call getImage()
-	foreach(reply; posts["posts"]) {
-		if( reply["filename"].type() !=  Json.Type.undefined) {
-			string ext = reply["ext"].toString().removechars("\"");
-			string img_file = reply["tim"].toString() ~ ext;
-			writefln("Downloading: %s", img_file);
-			getImage(img_file);
-		}
-	}
-}
-
-void getHTMLPage() {
-  string compl_json_url = api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ ".json";
-  writeln("JSON URL = ", compl_json_url);
-  auto json_contents = get(compl_json_url);
-
-  string semantic_url;
-  // vibe-d json implementation
-  string json_string = to!string(json_contents);
-  auto posts = parseJsonString(json_string);
-
-  foreach(reply; posts["posts"]) {
-    if( reply["semantic_url"].type() != Json.Type.undefined) {
-      semantic_url = reply["semantic_url"].toString().removechars("\"");
+    thread_url = thread_url.replace(api_url, api_img_url);
+    while(thread_url.length != 21) {
+      thread_url = thread_url.chop();
     }
+    writeln("thread_url with img url in = ", thread_url);
+
+    // Loop through each reply checking if there's an image present,
+  	// if so get the URL, and call getImage()
+  	foreach(reply; posts["posts"]) {
+      if( reply["replies"].type() != Json.Type.undefined) {
+        op_no = to!string(reply["no"]);
+        dir = _dir_entry.getValue() ~ "/"  ~ op_no ~ "/";
+      }
+  		if( reply["filename"].type() !=  Json.Type.undefined) {
+
+  			string ext = reply["ext"].toString().removechars("\"");
+  			string img_file = reply["tim"].toString() ~ ext;
+
+        string img_url = thread_url;
+        img_url = img_url ~ img_file;
+
+  			writefln("Downloading: %s", img_file);
+  			getImage(img_file, img_url);
+  		}
+  	}
   }
 
-  string compl_html_url = html_api_url ~ "/" ~ board ~ "/thread/" ~ thread_id ~ "/" ~ semantic_url ~ ".html";
-  writeln("compl_html_url = ", compl_html_url);
-  auto html_contents = get(compl_html_url);
+  void getImage(string filename, string url) {
 
+    if(!dir.exists()) {
+      mkdirRecurse(cast(char[]) dir);
+    }
 
-  if(!dir.exists()) {
-		mkdirRecurse(cast(char[]) dir);
-	}
+    filename = dir ~ filename;
 
-  string filename = dir ~ "index.html";
-  download(compl_html_url, filename);
+    download(url, filename);
+
+  }
+
+  private void save(CommandArgs args) {
+    // save the text
+  }
+
+  //
+  private void setUpKeyBindings() {
+    this.mainWindow.bind("<Control-s>", &this.save);
+  }
+
+  private void createMenu() {
+    auto menuBar = new MenuBar(this.mainWindow);
+
+    auto fileMenu = new Menu(menuBar, "File", 0)
+      .addEntry(new EmbeddedPng!("cancel.png"), "Save", &this.save, ImagePosition.left, "Ctrl-S");
+      //.addEntry(new EmbeddedPng!("cancel.png"), "Quit", &this.exitApplication, ImagePosition.left, "Ctrl-Q");
+  }
+
+  private Frame createTextPanel() {
+    auto widgetPane = new Frame();
+
+    auto thread_entryLabelFrame = new LabelFrame(widgetPane, "Thread URL")
+      .pack(10, 0, GeometrySide.top, GeometryFill.x, AnchorPosition.northWest, true);
+
+    this._thread_entry = new Entry(thread_entryLabelFrame)
+      .setWidth(0)
+      //.appendText("Enter thread URL...")
+      .appendText("https://boards.4chan.org/g/thread/51971506/the-g-wiki")
+      .pack(5, 0, GeometrySide.bottom, GeometryFill.both, AnchorPosition.northWest, true);
+
+    auto dirButton = new Button(thread_entryLabelFrame, new EmbeddedPng!("folder.png"), "Directory", ImagePosition.left)
+      .setCommand(&this.openDirectoryDialog)
+      .pack(5, 0, GeometrySide.right, GeometryFill.y, AnchorPosition.southEast, false);
+
+    this._dir_entry = new Entry(thread_entryLabelFrame)
+      .setWidth(10)
+      .pack(5, 0, GeometrySide.left, GeometryFill.both, AnchorPosition.southWest, true)//;
+      .setValue("/home/frank/saved_thread");
+
+    // Action buttons
+    auto downloadButton = new Button(widgetPane, "Download")
+      .setCommand(&this.thread_download)
+      .pack(5, 0, GeometrySide.left, GeometryFill.both, AnchorPosition.southWest, true);
+
+    auto exitButton = new Button(widgetPane, "Exit")
+      .setCommand(&this.exitApplication)
+      .pack(5, 0, GeometrySide.right, GeometryFill.both, AnchorPosition.southEast, true);
+
+    return widgetPane;
+  }
+
+  private void openDirectoryDialog(CommandArgs args) {
+    auto dialog = new DirectoryDialog("Choose directory")
+      .setDirectoryMustExist(false)
+      .show();
+
+    this._dir_entry.setValue(dialog.getResult());
+    this.dir = dialog.getResult();
+  }
+
+  private void exitApplication(CommandArgs args) {
+    this.exit();
+  }
 
 }
 
-void getImage(string filename) {
-  string URL = reply_img_url ~ "/" ~ board ~ "/" ~ filename;
-
-  if(!dir.exists()) {
-		mkdirRecurse(cast(char[]) dir);
-	}
-
-	filename = dir ~ filename;
-
-	download(URL, filename);
+// Main entry point
+void main(string[] args) {
+  auto app = new Application();
+  app.run();
 }

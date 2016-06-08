@@ -3,7 +3,17 @@
   "author" : "Sam Unwin",
   "targetType": "executable",
   "dependencies": {
-    "dlangui": "~>0.8.29",
-    "vibe-d:data" : "0.7.28"
-  }
+    "tkd": "~>1.1.9",
+    "vibe-d:data": "0.7.28"
+  },
+  "configurations" : [
+    {
+      "name": "run",
+      "targetType": "executable",
+      "mainSourceFile" : "source/app.d",
+      "stringImportPaths": ["source/media/"],
+      "targetName": "d4arch",
+      "targetPath": "build/d4arch"
+    }
+  ]
 }
