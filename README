@@ -4,8 +4,5 @@ This is a simple, poorly written, D, 4chan image archiver
 
 Usage:
 
-    ./d4arch --thread=[thread_id] --board=[board_id] --dir=[optional - changes the name of the directory to be saved]
-
-Example:
-    ./d4arch 51971506 g
-    (This happens to be the /g/ sticky)
+    No longer command line - just compile it using "dub --config=run" and then you
+    should have a working binary to run.
