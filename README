@@ -1,11 +1,10 @@
 ## d4arch
 
+![alt tag](https://i.imgur.com/UTUsZsm.png)
+
 This is a simple, poorly written, D, 4chan image archiver
 
 Usage:
 
     No longer command line - just compile it using "dub --config=run" and then you
     should have a working binary to run.
-
-
-![Alt Text](https://i.imgur.com/UTUsZsm.png)
