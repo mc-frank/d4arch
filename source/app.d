@@ -106,21 +106,9 @@ class Application : TkdApplication {
 
   }
 
-  private void save(CommandArgs args) {
-    // save the text
-  }
-
   //
   private void setUpKeyBindings() {
-    this.mainWindow.bind("<Control-s>", &this.save);
-  }
-
-  private void createMenu() {
-    auto menuBar = new MenuBar(this.mainWindow);
-
-    auto fileMenu = new Menu(menuBar, "File", 0)
-      .addEntry(new EmbeddedPng!("cancel.png"), "Save", &this.save, ImagePosition.left, "Ctrl-S");
-      //.addEntry(new EmbeddedPng!("cancel.png"), "Quit", &this.exitApplication, ImagePosition.left, "Ctrl-Q");
+    this.mainWindow.bind("<Control-q>", &this.exitApplication);
   }
 
   private Frame createTextPanel() {
