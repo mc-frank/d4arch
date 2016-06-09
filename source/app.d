@@ -48,7 +48,8 @@ class Application : TkdApplication {
     thread_url = thread_url.replace(http_html_url, api_url);
 
     // make length of thread_url = 36
-    while(thread_url.length != 36) {
+    int lastIndex = to!int(thread_url.lastIndexOf("/"));
+    while(thread_url.length != lastIndex) {
       thread_url = thread_url.chop();
     }
 
@@ -59,7 +60,12 @@ class Application : TkdApplication {
   private void thread_download(CommandArgs args) {
     //download
     string thread_url = _thread_entry.getValue();
+    if(thread_url.length == 0 || thread_url == "Enter thread URL...") {
+      // Display error
+    }
+
     thread_url = getAPIUrl(thread_url);
+    writeln(thread_url);
 
     auto contents = get(thread_url);
 
@@ -68,10 +74,11 @@ class Application : TkdApplication {
     auto posts = parseJsonString(json_string);
 
     thread_url = thread_url.replace(api_url, api_img_url);
-    while(thread_url.length != 21) {
+
+    int lastIndex = to!int(thread_url.lastIndexOf("/")) - 6;  // Remove "thread" from the end of the URL
+    while(thread_url.length != lastIndex) {
       thread_url = thread_url.chop();
     }
-    writeln("thread_url with img url in = ", thread_url);
 
     // Loop through each reply checking if there's an image present,
   	// if so get the URL, and call getImage()
@@ -88,7 +95,7 @@ class Application : TkdApplication {
         string img_url = thread_url;
         img_url = img_url ~ img_file;
 
-  			writefln("Downloading: %s", img_file);
+  			writefln("Downloading: %s from %s", img_file, img_url);
   			getImage(img_file, img_url);
   		}
   	}
@@ -119,8 +126,8 @@ class Application : TkdApplication {
 
     this._thread_entry = new Entry(thread_entryLabelFrame)
       .setWidth(0)
-      //.appendText("Enter thread URL...")
-      .appendText("https://boards.4chan.org/g/thread/51971506/the-g-wiki")
+      .appendText("Enter thread URL...")
+      //.appendText("https://boards.4chan.org/g/thread/51971506/the-g-wiki")
       .pack(5, 0, GeometrySide.bottom, GeometryFill.both, AnchorPosition.northWest, true);
 
     auto dirButton = new Button(thread_entryLabelFrame, new EmbeddedPng!("folder.png"), "Directory", ImagePosition.left)
@@ -129,8 +136,8 @@ class Application : TkdApplication {
 
     this._dir_entry = new Entry(thread_entryLabelFrame)
       .setWidth(10)
-      .pack(5, 0, GeometrySide.left, GeometryFill.both, AnchorPosition.southWest, true)//;
-      .setValue("/home/frank/saved_thread");
+      .pack(5, 0, GeometrySide.left, GeometryFill.both, AnchorPosition.southWest, true);
+      //.setValue("/home/frank/saved_thread");
 
     // Action buttons
     auto downloadButton = new Button(widgetPane, "Download")
