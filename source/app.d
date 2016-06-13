@@ -1,4 +1,5 @@
 import core.thread,
+      std.getopt,
       std.concurrency,
       std.stdio,
       std.algorithm,
@@ -10,6 +11,17 @@ import core.thread,
       tkd.tkdapplication,
       vibe.data.json,
       std.net.curl;
+
+// d4arch usage
+string _usage = "Usage: d4arch --thread=[thread_id] --board=[board] --dir=[optional - directory]";
+
+// Show GUI ?
+bool gui = true;
+
+// CLI variables
+string _cli_thread;
+string _cli_dir_temp;
+string _cli_dir = "./saved_thread";
 
 // HTML URL
 string http_html_url = "http://boards.4chan.org/";
@@ -99,6 +111,9 @@ class Application : TkdApplication {
   			getImage(img_file, img_url);
   		}
   	}
+
+    this.openMessageDialog();
+
   }
 
   void getImage(string filename, string url) {
@@ -144,11 +159,19 @@ class Application : TkdApplication {
       .setCommand(&this.thread_download)
       .pack(5, 0, GeometrySide.left, GeometryFill.both, AnchorPosition.southWest, true);
 
-    auto exitButton = new Button(widgetPane, "Exit")
+    auto exitButton = new Button(widgetPane, new EmbeddedPng!("cancel.png"), "Exit", ImagePosition.left)
       .setCommand(&this.exitApplication)
       .pack(5, 0, GeometrySide.right, GeometryFill.both, AnchorPosition.southEast, true);
 
     return widgetPane;
+  }
+
+  private void openMessageDialog() {
+    auto dialog = new MessageDialog(this.mainWindow)
+      .setMessage("Completed :D")
+      .setDetailMessage("Archiver has finished downloading.")
+      .setType(MessageDialogType.ok)
+      .show();
   }
 
   private void openDirectoryDialog(CommandArgs args) {
@@ -168,6 +191,82 @@ class Application : TkdApplication {
 
 // Main entry point
 void main(string[] args) {
-  auto app = new Application();
-  app.run();
+
+  auto opt = getopt(args, "gui", &gui, "thread", &_cli_thread, "dir", &_cli_dir_temp);
+
+  writeln(_cli_thread);
+
+  if(gui == false) {
+    if(_cli_thread.length == 0 || _cli_dir_temp.length == 0) {
+      writeln(_usage);
+    }
+    else {
+      getThread();
+    }
+  }
+  else {
+    auto app = new Application();
+    app.run();
+  }
+
+}
+
+void getThread() {
+  string op_no;
+  _cli_thread = _cli_thread.replace(https_html_url, api_url);
+  _cli_thread = _cli_thread.replace(http_html_url, api_url);
+  writeln("_cli_thread = ", _cli_thread);
+
+  int lastIndex = to!int(_cli_thread.lastIndexOf("/"));
+  while(_cli_thread.length != lastIndex) {
+    _cli_thread = _cli_thread.chop();
+  }
+
+  _cli_thread = _cli_thread ~ ".json";
+
+  auto contents = get(_cli_thread);
+
+  //vibe-d json implementation
+  string json_string = to!string(contents);
+  auto posts = parseJsonString(json_string);
+
+  _cli_thread = _cli_thread.replace(api_url, api_img_url);
+
+  lastIndex = to!int(_cli_thread.lastIndexOf("/")) - 6;  // Remove "thread" from the end of the URL
+  while(_cli_thread.length != lastIndex) {
+    _cli_thread = _cli_thread.chop();
+  }
+
+  // Loop through each reply checking if there's an image present,
+  // if so get the URL, and call getImage()
+  foreach(reply; posts["posts"]) {
+    if( reply["replies"].type() != Json.Type.undefined) {
+      op_no = to!string(reply["no"]);
+      _cli_dir = _cli_dir_temp ~ "/"  ~ op_no ~ "/";
+      writeln(_cli_dir);
+    }
+    if( reply["filename"].type() !=  Json.Type.undefined) {
+
+      string ext = reply["ext"].toString().removechars("\"");
+      string img_file = reply["tim"].toString() ~ ext;
+
+      string img_url = _cli_thread;
+      img_url = img_url ~ img_file;
+
+      writefln("Downloading: %s from %s", img_file, img_url);
+      getImage(img_file, img_url);
+    }
+  }
+}
+
+void getImage(string filename, string url) {
+
+  if(!_cli_dir.exists()) {
+    mkdirRecurse(cast(char[]) _cli_dir);
+  }
+
+  filename = _cli_dir ~ filename;
+
+  download(url, filename);
+
 }

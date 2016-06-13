@@ -1,6 +1,6 @@
 {
 	"dub": {
-		"lastUpgrade": "2016-06-09T18:21:34.2863798",
+		"lastUpgrade": "2016-06-13T13:42:42.3582781",
 		"cachedUpgrades": {
 			"dsfml": "2.1.1",
 			"vibe-d": "0.7.28",
