@@ -77,7 +77,7 @@ class Application : TkdApplication {
     }
 
     thread_url = getAPIUrl(thread_url);
-    writeln(thread_url);
+    writeln("Thread URL = ", thread_url);
 
     auto contents = get(thread_url);
 
@@ -136,7 +136,7 @@ class Application : TkdApplication {
   private Frame createTextPanel() {
     auto widgetPane = new Frame();
 
-    auto thread_entryLabelFrame = new LabelFrame(widgetPane, "Thread URL")
+    auto thread_entryLabelFrame = new LabelFrame(widgetPane, "Thread Information:")
       .pack(10, 0, GeometrySide.top, GeometryFill.x, AnchorPosition.northWest, true);
 
     this._thread_entry = new Entry(thread_entryLabelFrame)
@@ -155,7 +155,7 @@ class Application : TkdApplication {
       //.setValue("/home/frank/saved_thread");
 
     // Action buttons
-    auto downloadButton = new Button(widgetPane, "Download")
+    auto downloadButton = new Button(widgetPane, new EmbeddedPng!("disk.png"), "Download", ImagePosition.left)
       .setCommand(&this.thread_download)
       .pack(5, 0, GeometrySide.left, GeometryFill.both, AnchorPosition.southWest, true);
 
