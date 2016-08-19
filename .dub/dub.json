@@ -1,12 +1,12 @@
 {
 	"dub": {
-		"lastUpgrade": "2016-07-10T12:02:55.7893017",
+		"lastUpgrade": "2016-08-19T20:11:53.5708921",
 		"cachedUpgrades": {
 			"dsfml": "2.1.1",
 			"vibe-d": "0.7.28",
 			"derelict-util": "2.0.6",
 			"dlangui": "0.8.29",
-			"x11": "1.0.14",
+			"x11": "1.0.15",
 			"derelict-gl3": "1.0.18",
 			"tkd": "1.1.9",
 			"derelict-ft": "1.1.2",
